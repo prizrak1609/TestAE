@@ -1,0 +1,32 @@
+PODS:
+  - CRToast (0.0.9)
+  - GDPerformanceView-Swift (1.2.0)
+  - GoogleMaps (2.3.1):
+    - GoogleMaps/Maps (= 2.3.1)
+  - GoogleMaps/Base (2.3.1)
+  - GoogleMaps/Maps (2.3.1):
+    - GoogleMaps/Base
+  - GooglePlaces (2.3.1):
+    - GoogleMaps/Base (= 2.3.1)
+  - IQKeyboardManager (4.0.10)
+  - SwiftLint (0.20.1)
+
+DEPENDENCIES:
+  - CRToast (~> 0.0.9)
+  - GDPerformanceView-Swift (~> 1.2.0)
+  - GoogleMaps
+  - GooglePlaces
+  - IQKeyboardManager
+  - SwiftLint
+
+SPEC CHECKSUMS:
+  CRToast: 5a78c22b921c5ed3487488af605bc403a9c92fed
+  GDPerformanceView-Swift: 5f12f13dcdca4cb87f91ef91ba6b50981421c57f
+  GoogleMaps: c66a71058b9b1294bcdd5463a68e357fa50c079f
+  GooglePlaces: 4a7b22debfa1af65017b82943431822607e45201
+  IQKeyboardManager: 593ee99b88381f4b9ccb22bd680f22606351bd41
+  SwiftLint: f60095dc173a3f3ec505bb34f5229c3dfd779a54
+
+PODFILE CHECKSUM: 1371d8d7f2d44b7d3b7be98160e8ee1549ee7a34
+
+COCOAPODS: 1.2.1
