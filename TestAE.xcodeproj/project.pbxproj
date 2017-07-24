@@ -11,6 +11,8 @@
 		1E99749BAC3A92B1A7716161 /* Pods_TestAE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB245E319D476638E1DDEFD4 /* Pods_TestAE.framework */; };
 		781FFCAC1F264E1E003979AD /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781FFCAA1F264E1E003979AD /* Functions.swift */; };
 		781FFCAD1F264E1E003979AD /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781FFCAB1F264E1E003979AD /* Storyboards.swift */; };
+		781FFCAF1F266128003979AD /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781FFCAE1F266128003979AD /* UserDefaults.swift */; };
+		781FFCB21F26635A003979AD /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781FFCB11F26635A003979AD /* PlaceModel.swift */; };
 		78688F491F264AC10014E5F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78688F481F264AC10014E5F2 /* AppDelegate.swift */; };
 		78688F4B1F264AC10014E5F2 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78688F4A1F264AC10014E5F2 /* Main.swift */; };
 		78688F4E1F264AC20014E5F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78688F4C1F264AC20014E5F2 /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 		6752B5F647CE14A04B0C74FB /* Pods-TestAETests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAETests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestAETests/Pods-TestAETests.debug.xcconfig"; sourceTree = "<group>"; };
 		781FFCAA1F264E1E003979AD /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		781FFCAB1F264E1E003979AD /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		781FFCAE1F266128003979AD /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		781FFCB11F26635A003979AD /* PlaceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		78688F451F264AC10014E5F2 /* TestAE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78688F481F264AC10014E5F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78688F4A1F264AC10014E5F2 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
@@ -119,10 +123,20 @@
 		781FFCA81F264DD5003979AD /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				781FFCB01F26634E003979AD /* Models */,
 				781FFCAA1F264E1E003979AD /* Functions.swift */,
 				781FFCAB1F264E1E003979AD /* Storyboards.swift */,
+				781FFCAE1F266128003979AD /* UserDefaults.swift */,
 			);
 			name = Global;
+			sourceTree = "<group>";
+		};
+		781FFCB01F26634E003979AD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				781FFCB11F26635A003979AD /* PlaceModel.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		78688F3C1F264AC10014E5F2 = {
@@ -491,6 +505,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				781FFCAD1F264E1E003979AD /* Storyboards.swift in Sources */,
+				781FFCB21F26635A003979AD /* PlaceModel.swift in Sources */,
+				781FFCAF1F266128003979AD /* UserDefaults.swift in Sources */,
 				78688F4B1F264AC10014E5F2 /* Main.swift in Sources */,
 				78688F491F264AC10014E5F2 /* AppDelegate.swift in Sources */,
 				781FFCAC1F264E1E003979AD /* Functions.swift in Sources */,

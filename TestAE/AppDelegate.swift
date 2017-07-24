@@ -14,7 +14,8 @@ import GooglePlaces
     import GDPerformanceView_Swift
 #endif
 
-fileprivate let googleApiKey = "AIzaSyBRyIrrlYk2veK3lAOgCe4hULdmrMknfqM"
+fileprivate let googleMapApiKey = "AIzaSyBRyIrrlYk2veK3lAOgCe4hULdmrMknfqM"
+fileprivate let googlePlaceApiKey = "AIzaSyDa-UFr8l8PntKvrlar3QsmfXN24cY6uTc"
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,8 +25,8 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         // init google maps
-        GMSServices.provideAPIKey(googleApiKey)
-        GMSPlacesClient.provideAPIKey(googleApiKey)
+        GMSServices.provideAPIKey(googleMapApiKey)
+        GMSPlacesClient.provideAPIKey(googlePlaceApiKey)
         // init keyboard manager
         IQKeyboardManager.shared().isEnabled = true
         IQKeyboardManager.shared().isEnableAutoToolbar = false

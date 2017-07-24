@@ -34,29 +34,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKl-bZ-oln">
-                                <rect key="frame" x="113" y="97" width="94" height="28"/>
-                                <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
-                                <state key="normal" title="Build route"/>
-                                <connections>
-                                    <action selector="buildRoute:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ip7-JH-FNh"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="dKl-bZ-oln" firstAttribute="centerX" secondItem="tvI-dE-uZg" secondAttribute="centerX" id="3Tb-qn-TMW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Im7-WH-4Jh" secondAttribute="trailing" id="8qL-df-Yzi"/>
                             <constraint firstItem="Im7-WH-4Jh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NsJ-uE-Bb8"/>
                             <constraint firstItem="tvI-dE-uZg" firstAttribute="leading" secondItem="Im7-WH-4Jh" secondAttribute="leading" id="Rcg-9P-rNy"/>
                             <constraint firstItem="tvI-dE-uZg" firstAttribute="trailing" secondItem="Im7-WH-4Jh" secondAttribute="trailing" id="c1a-Ou-OL1"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Im7-WH-4Jh" secondAttribute="leading" id="exG-fg-EWP"/>
-                            <constraint firstItem="dKl-bZ-oln" firstAttribute="top" secondItem="tvI-dE-uZg" secondAttribute="bottom" constant="9" id="iE1-Gz-QOp"/>
                             <constraint firstItem="tvI-dE-uZg" firstAttribute="top" secondItem="Im7-WH-4Jh" secondAttribute="bottom" constant="8" id="xuF-yu-ZG2"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="buildRouteButton" destination="dKl-bZ-oln" id="Aoh-1x-iye"/>
                         <outlet property="firstPlaceTextField" destination="Im7-WH-4Jh" id="ntr-eL-Z09"/>
                         <outlet property="secondPlaceTextField" destination="tvI-dE-uZg" id="yOI-ah-yZq"/>
                     </connections>
