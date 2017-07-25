@@ -20,12 +20,9 @@ final class Main: UIViewController {
     fileprivate var selectedTextField: UITextField?
     fileprivate var mapView: GMSMapView?
     fileprivate let locationManager = CLLocationManager()
+    fileprivate let server = Server()
 
-    fileprivate var firstPlace: PlaceModel?
-    fileprivate var firstPlaceMarker: GMSMarker?
-
-    fileprivate var secondPlace: PlaceModel?
-    fileprivate var secondPlaceMarker: GMSMarker?
+    fileprivate var route = RouteModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,14 +33,15 @@ final class Main: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // set current location
-        if let firstPlace = firstPlace {
-            firstPlaceTextField.text = firstPlace.name
-            map(zoomOn: firstPlace, value: mapZoomLevel)
+        if route.startPlace != .zero {
+            firstPlaceTextField.text = route.startPlace.name
+            map(zoomOn: route.startPlace, value: mapZoomLevel)
         }
-        if let secondPlace = secondPlace {
-            secondPlaceTextField.text = secondPlace.name
-            map(zoomOn: secondPlace, value: mapZoomLevel)
-        } else {
+        if route.endPlace != .zero {
+            secondPlaceTextField.text = route.endPlace.name
+            map(zoomOn: route.endPlace, value: mapZoomLevel)
+        }
+        if route.startPlace == .zero, route.endPlace == .zero {
             if CLLocationManager.authorizationStatus() == .notDetermined || CLLocationManager.authorizationStatus() == .denied {
                 locationManager.delegate = self
                 locationManager.requestWhenInUseAuthorization()
@@ -58,8 +56,8 @@ final class Main: UIViewController {
 extension Main {
 
     func getPlacesIfExists() {
-        firstPlace = UserDefaults.standard.getFirstPlace()
-        secondPlace = UserDefaults.standard.getSecondPlace()
+        route.startPlace = UserDefaults.standard.getFirstPlace() ?? .zero
+        route.endPlace = UserDefaults.standard.getSecondPlace() ?? .zero
     }
 
     func mapZoomOnCurrentPlace() {
@@ -89,28 +87,27 @@ extension Main {
     }
 
     func buildRouteIfCan() {
-        guard let firstPlace = firstPlace,
-            let secondPlace = secondPlace,
+        guard route.startPlace != .zero,
+            route.endPlace != .zero,
             let mapView = mapView
             else {
                 return
             }
         mapView.clear()
-        if firstPlaceMarker == nil {
-            firstPlaceMarker = GMSMarker(position: firstPlace.location)
-            firstPlaceMarker?.title = firstPlace.name
+        route.startMarker.map = mapView
+        route.endMarker.map = mapView
+        server.getRoute(from: route) { [weak self] result in
+            guard let welf = self else { return }
+            if case .failure(let error) = result {
+                showText(error.localizedDescription)
+                return
+            }
+            if case .success(let models) = result {
+                for model in models {
+                    model.map = welf.mapView
+                }
+            }
         }
-        if secondPlaceMarker == nil {
-            secondPlaceMarker = GMSMarker(position: secondPlace.location)
-            secondPlaceMarker?.title = secondPlace.name
-        }
-        firstPlaceMarker?.map = mapView
-        secondPlaceMarker?.map = mapView
-        let path = GMSMutablePath()
-        path.add(firstPlace.location)
-        path.add(secondPlace.location)
-        let rectangle = GMSPolyline(path: path)
-        rectangle.map = mapView
     }
 }
 
@@ -144,18 +141,12 @@ extension Main : GMSAutocompleteViewControllerDelegate {
         selectedTextField?.text = place.formattedAddress
         let model = PlaceModel(place: place)
         if selectedTextField == firstPlaceTextField {
-            firstPlace = model
+            route.startPlace = model
             UserDefaults.standard.setValue(firstPlace: model)
-            firstPlaceMarker = GMSMarker(position: model.location)
-            firstPlaceMarker?.title = model.name
-            firstPlaceMarker?.map = mapView
         }
         if selectedTextField == secondPlaceTextField {
-            secondPlace = model
+            route.endPlace = model
             UserDefaults.standard.setValue(secondPlace: model)
-            secondPlaceMarker = GMSMarker(position: model.location)
-            secondPlaceMarker?.title = model.name
-            secondPlaceMarker?.map = mapView
         }
         map(zoomOn: model, value: mapZoomLevel)
         dismiss(animated: true, completion: nil)

@@ -22,6 +22,11 @@ target 'TestAE' do
   pod 'GoogleMaps'
   pod 'GooglePlaces'
 
+# https://github.com/Alamofire/Alamofire
+  pod 'Alamofire', '~> 4.4'
+
+# https://github.com/SwiftyJSON/SwiftyJSON
+  pod 'SwiftyJSON'
 
   target 'TestAETests' do
     inherit! :search_paths

@@ -30,4 +30,14 @@ struct PlaceModel {
     init(place: GMSPlace) {
         self.init(name: place.name, location: place.coordinate)
     }
+
+    static let zero = PlaceModel(name: "", latitude: 0, longitude: 0)
+
+    static func != (lhs: PlaceModel, rhs: PlaceModel) -> Bool {
+        return lhs.name != rhs.name && lhs.location.latitude != rhs.location.latitude && lhs.location.longitude != rhs.location.longitude
+    }
+
+    static func == (lhs: PlaceModel, rhs: PlaceModel) -> Bool {
+        return lhs.name == rhs.name && lhs.location.latitude == rhs.location.latitude && lhs.location.longitude == rhs.location.longitude
+    }
 }
