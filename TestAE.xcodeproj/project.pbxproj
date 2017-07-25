@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		178248CCB63E67A550F2DDE8 /* Pods_TestAEUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36BC7CAF59F98E615CD6F60A /* Pods_TestAEUITests.framework */; };
 		1E99749BAC3A92B1A7716161 /* Pods_TestAE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB245E319D476638E1DDEFD4 /* Pods_TestAE.framework */; };
 		7802D6AA1F272A34002E9B49 /* RouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7802D6A91F272A34002E9B49 /* RouteModel.swift */; };
 		7802D6AD1F273669002E9B49 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7802D6AC1F273669002E9B49 /* Server.swift */; };
@@ -21,19 +20,11 @@
 		78688F501F264AC20014E5F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78688F4F1F264AC20014E5F2 /* Assets.xcassets */; };
 		78688F531F264AC20014E5F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78688F511F264AC20014E5F2 /* LaunchScreen.storyboard */; };
 		78688F5E1F264AC20014E5F2 /* TestAETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78688F5D1F264AC20014E5F2 /* TestAETests.swift */; };
-		78688F691F264AC20014E5F2 /* TestAEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78688F681F264AC20014E5F2 /* TestAEUITests.swift */; };
 		93580A5447A496802D06DD1E /* Pods_TestAETests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A7E57C5B59CAA27CA09226 /* Pods_TestAETests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		78688F5A1F264AC20014E5F2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 78688F3D1F264AC10014E5F2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 78688F441F264AC10014E5F2;
-			remoteInfo = TestAE;
-		};
-		78688F651F264AC20014E5F2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 78688F3D1F264AC10014E5F2 /* Project object */;
 			proxyType = 1;
@@ -64,9 +55,6 @@
 		78688F591F264AC20014E5F2 /* TestAETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78688F5D1F264AC20014E5F2 /* TestAETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAETests.swift; sourceTree = "<group>"; };
 		78688F5F1F264AC20014E5F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		78688F641F264AC20014E5F2 /* TestAEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		78688F681F264AC20014E5F2 /* TestAEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAEUITests.swift; sourceTree = "<group>"; };
-		78688F6A1F264AC20014E5F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8260095DF1E02521EDD18292 /* Pods-TestAETests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAETests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestAETests/Pods-TestAETests.release.xcconfig"; sourceTree = "<group>"; };
 		B4801A748ED941B96A41178D /* Pods-TestAEUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAEUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestAEUITests/Pods-TestAEUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BB9F99C494A61D9EE176E7EF /* Pods-TestAE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAE.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestAE/Pods-TestAE.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,14 +75,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				93580A5447A496802D06DD1E /* Pods_TestAETests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		78688F611F264AC20014E5F2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				178248CCB63E67A550F2DDE8 /* Pods_TestAEUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +137,6 @@
 			children = (
 				78688F471F264AC10014E5F2 /* TestAE */,
 				78688F5C1F264AC20014E5F2 /* TestAETests */,
-				78688F671F264AC20014E5F2 /* TestAEUITests */,
 				78688F461F264AC10014E5F2 /* Products */,
 				3C1378A6F36E6420F95EE0D9 /* Pods */,
 				35D69B335EBF1620E1F557B5 /* Frameworks */,
@@ -169,7 +148,6 @@
 			children = (
 				78688F451F264AC10014E5F2 /* TestAE.app */,
 				78688F591F264AC20014E5F2 /* TestAETests.xctest */,
-				78688F641F264AC20014E5F2 /* TestAEUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,15 +170,6 @@
 				78688F5F1F264AC20014E5F2 /* Info.plist */,
 			);
 			path = TestAETests;
-			sourceTree = "<group>";
-		};
-		78688F671F264AC20014E5F2 /* TestAEUITests */ = {
-			isa = PBXGroup;
-			children = (
-				78688F681F264AC20014E5F2 /* TestAEUITests.swift */,
-				78688F6A1F264AC20014E5F2 /* Info.plist */,
-			);
-			path = TestAEUITests;
 			sourceTree = "<group>";
 		};
 		78688F761F264ADF0014E5F2 /* Other */ = {
@@ -268,27 +237,6 @@
 			productReference = 78688F591F264AC20014E5F2 /* TestAETests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		78688F631F264AC20014E5F2 /* TestAEUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 78688F731F264AC20014E5F2 /* Build configuration list for PBXNativeTarget "TestAEUITests" */;
-			buildPhases = (
-				CC360C70116075B71DB6A584 /* [CP] Check Pods Manifest.lock */,
-				78688F601F264AC20014E5F2 /* Sources */,
-				78688F611F264AC20014E5F2 /* Frameworks */,
-				78688F621F264AC20014E5F2 /* Resources */,
-				68F0BB74DDF80F543ED70C96 /* [CP] Embed Pods Frameworks */,
-				DD3F0DFC5C349AB81A92DF19 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				78688F661F264AC20014E5F2 /* PBXTargetDependency */,
-			);
-			name = TestAEUITests;
-			productName = TestAEUITests;
-			productReference = 78688F641F264AC20014E5F2 /* TestAEUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -304,11 +252,6 @@
 						ProvisioningStyle = Manual;
 					};
 					78688F581F264AC20014E5F2 = {
-						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 78688F441F264AC10014E5F2;
-					};
-					78688F631F264AC20014E5F2 = {
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 78688F441F264AC10014E5F2;
@@ -330,7 +273,6 @@
 			targets = (
 				78688F441F264AC10014E5F2 /* TestAE */,
 				78688F581F264AC20014E5F2 /* TestAETests */,
-				78688F631F264AC20014E5F2 /* TestAEUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -353,31 +295,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		78688F621F264AC20014E5F2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		68F0BB74DDF80F543ED70C96 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestAEUITests/Pods-TestAEUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		781FFCA91F264DE2003979AD /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -451,36 +371,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		CC360C70116075B71DB6A584 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		DD3F0DFC5C349AB81A92DF19 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestAEUITests/Pods-TestAEUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E18FE57EC7F3F1796EE2D051 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -537,14 +427,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		78688F601F264AC20014E5F2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				78688F691F264AC20014E5F2 /* TestAEUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -552,11 +434,6 @@
 			isa = PBXTargetDependency;
 			target = 78688F441F264AC10014E5F2 /* TestAE */;
 			targetProxy = 78688F5A1F264AC20014E5F2 /* PBXContainerItemProxy */;
-		};
-		78688F661F264AC20014E5F2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 78688F441F264AC10014E5F2 /* TestAE */;
-			targetProxy = 78688F651F264AC20014E5F2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -733,34 +610,6 @@
 			};
 			name = Release;
 		};
-		78688F741F264AC20014E5F2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5ABFA4AB9B63E528FA4D544E /* Pods-TestAEUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = TestAEUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = test.ae.TestAEUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = TestAE;
-			};
-			name = Debug;
-		};
-		78688F751F264AC20014E5F2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4801A748ED941B96A41178D /* Pods-TestAEUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = TestAEUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = test.ae.TestAEUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = TestAE;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -787,15 +636,6 @@
 			buildConfigurations = (
 				78688F711F264AC20014E5F2 /* Debug */,
 				78688F721F264AC20014E5F2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		78688F731F264AC20014E5F2 /* Build configuration list for PBXNativeTarget "TestAEUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				78688F741F264AC20014E5F2 /* Debug */,
-				78688F751F264AC20014E5F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
